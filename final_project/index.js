@@ -6,13 +6,30 @@ const genl_routes = require('./router/general.js').general;
 
 const app = express();
 
+// const secretKey = 'super_duper_secret_key';
+
 app.use(express.json());
 
-app.use("/customer",session({secret:"fingerprint_customer",resave: true, saveUninitialized: true}))
 
-app.use("/customer/auth/*", function auth(req,res,next){
-//Write the authenication mechanism here
-});
+app.use("/customer",session({secret:"fingerprint_customer",resave: true, saveUninitialized: true}));
+
+
+// app.use("/customer/auth/*", function auth(req,res,next){
+//     const token = req.header('Authorization');
+
+//     if(!token) {
+//         return res.status(401).json({ message: "You must be signed in to do that." });
+//     }
+
+//     jwt.verify(token, secretKey, (err, decoded) => {
+//         if (err) {
+//             console.log(err);
+//             return res.status(401).json({ message: "Token missing/Not Signed In" });
+//         }
+//         req.user = decoded;
+//         next();
+//     });
+// });
  
 const PORT =5000;
 
