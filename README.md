@@ -18,4 +18,3 @@ DELETE http://localhost:5000/customer/review/2
 {
   "user": "johnny"
 }
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5ueSIsImlhdCI6MTY5NTEzODk2NCwiZXhwIjoxNjk1MTQyNTY0fQ.NJgNPa2m8qzVAvEV1JLNCBXlET_szUhBhvOD7htqhCk
